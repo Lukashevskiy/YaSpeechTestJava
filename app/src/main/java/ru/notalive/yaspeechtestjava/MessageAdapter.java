@@ -63,7 +63,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     public int getItemCount() {
         return messages.size();
     }
-
+    public void changeMessage(int id, String message){
+        messages.get(id).setText(message);
+    }
     public static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView textView;
         public ViewHolder(@NonNull View itemView) {
